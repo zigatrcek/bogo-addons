@@ -3,7 +3,7 @@ from odoo import api, fields, models
 
 class PetsPet(models.Model):
     _name = 'pets.pet'
-    _inherit = ["image.mixin"]
+    _inherit = ["image.mixin", "mail.thread"]
     _description = "Pet"
 
     name = fields.Char(required=True)
