@@ -13,3 +13,4 @@ class PetsPet(models.Model):
         selection=[("cat", "Cat"), ("dog", "Dog")], required=True
     )
     sex = fields.Selection([("male", "Male"), ("female", "Female")], required=True)
+    passport_number = fields.Char(string="Passport No.")

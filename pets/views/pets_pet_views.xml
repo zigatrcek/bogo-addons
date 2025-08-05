@@ -24,12 +24,19 @@
                                 <field name="name" placeholder="e.g. Marco" class="oe_inline"/>
                             </h1>
                             <group>
-                                <group name="Basic Info">
+                                <group string="Basic Info">
                                     <field name="pet_type" />
-                                    <field name="official_name" />
+                                    <field name="sex" />
                                 </group>
-
+                                <group string="Passport Information">
+                                    <field name="official_name" />
+                                    <field name="date_of_birth" />
+                                    <field name="passport_number" />
+                                </group>
                             </group>
+                            <notebook>
+                                <page string="Recurring Tasks"></page>
+                            </notebook>
                         </div>
                     </sheet>
                 </form>
