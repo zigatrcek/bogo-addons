@@ -14,3 +14,6 @@ class PetsPet(models.Model):
     )
     sex = fields.Selection([("male", "Male"), ("female", "Female")], required=True)
     passport_number = fields.Char(string="Passport No.")
+
+    vet_id = fields.Many2one("res.partner", "Veterinarian")
+    move_ids = fields.One2many("account.move", "pet_id", "Invoices")

@@ -27,6 +27,7 @@
                                 <group string="Basic Info">
                                     <field name="pet_type" />
                                     <field name="sex" />
+                                    <field name="vet_id" />
                                 </group>
                                 <group string="Passport Information">
                                     <field name="official_name" />
@@ -36,6 +37,16 @@
                             </group>
                             <notebook>
                                 <page string="Recurring Tasks"></page>
+                                <page string="Medical History"></page>
+                                <page string="Costs">
+                                    <field name="move_ids">
+                                        <tree>
+                                            <field name="name" />
+                                            <field name="partner_id" />
+                                            <field name="amount_total_signed" />
+                                        </tree>
+                                    </field>
+                                </page>
                             </notebook>
                         </div>
                     </sheet>

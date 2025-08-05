@@ -8,6 +8,7 @@
     "data": [
         "views/pets_pet_views.xml",
         "views/menu.xml",
+        "views/account_move_views.xml",
         "security/ir.model.access.csv",
     ],
     "demo": [],
