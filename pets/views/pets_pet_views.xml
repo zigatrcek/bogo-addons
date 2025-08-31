@@ -78,7 +78,6 @@
             <field name="model">pets.pet</field>
             <field name="arch" type="xml">
                 <kanban>
-                    <field name="image_128"/>
                     <templates>
                         <t t-name="card" class="flex-row">
                             <aside class="o_kanban_aside_full">
