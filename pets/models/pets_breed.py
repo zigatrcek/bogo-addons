@@ -6,4 +6,4 @@ class PetsBreed(models.Model):
     _description = 'Breed'
 
     name = fields.Char(required=True, translate=True)
-    species_id = fields.Many2one('pets.species')
+    species_id = fields.Many2one("pets.species", required=True)
