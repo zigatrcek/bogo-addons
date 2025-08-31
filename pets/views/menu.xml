@@ -1,7 +1,10 @@
 <odoo>
     <data>
         <menuitem name='Pets' id='pets.menu_root' />
-        <menuitem name='Pets' id='pets.menu_pets' parent='pets.menu_root' action='pets.pet_action_window' />
+        <menuitem name='Pets' id='pets.menu_pets' parent="pets.menu_root" action="pets.pet_action_window" />
         <menuitem name="Measurements" id="pets.menu_measurements" parent="pets.menu_root" action="pets.measurement_action_graph" />
+        <menuitem name="Configuration" id="pets.menu_config" parent="pets.menu_root" sequence="99" />
+        <menuitem name="Species" id="pets.menu_species" parent="pets.menu_config" action="pets.species_action_window" />
+        <menuitem name="Breeds" id="pets.menu_breed" parent="pets.menu_config" action="pets.breed_action_window" />
     </data>
 </odoo>

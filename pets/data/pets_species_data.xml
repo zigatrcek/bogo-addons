@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="pets.species_cat" model="pets.species">
+            <field name="name">Cat</field>
+            <field name="scientific_name">Felis catus</field>
+        </record>
+        <record id="pets.species_dog" model="pets.species">
+            <field name="name">Dog</field>
+            <field name="scientific_name">Canis familiaris</field>
+        </record>
+    </data>
+</odoo>
