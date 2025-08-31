@@ -4,12 +4,12 @@
             <field name="name">pets.pet.list</field>
             <field name="model">pets.pet</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name" />
                     <field name="pet_type" string="Type" />
                     <field name="sex" />
                     <field name="date_of_birth" />
-                </tree>
+                </list>
             </field>
         </record>
         <record id="pets.pet_view_form" model="ir.ui.view">
@@ -23,37 +23,38 @@
                             <h1>
                                 <field name="name" placeholder="e.g. Marco" class="oe_inline"/>
                             </h1>
-                            <group>
-                                <group string="Basic Info">
-                                    <field name="pet_type" />
-                                    <field name="sex" />
-                                    <field name="vet_id" />
-                                </group>
-                                <group string="Passport Information">
-                                    <field name="official_name" />
-                                    <field name="date_of_birth" />
-                                    <field name="passport_number" />
-                                </group>
-                            </group>
-                            <notebook>
-                                <page string="Recurring Tasks"></page>
-                                <page string="Medical History"></page>
-                                <page string="Costs">
-                                    <field name="move_ids" context="{'default_move_type': 'in_invoice'}">
-                                        <tree>
-                                            <field name="name" />
-                                            <field name="partner_id" />
-                                            <field name="amount_total_signed" />
-                                        </tree>
-                                    </field>
-                                </page>
-                            </notebook>
                         </div>
+                        <group>
+                            <group string="Basic Info">
+                                <field name="pet_type" />
+                                <field name="sex" />
+                                <field name="vet_id" />
+                            </group>
+                            <group string="Passport Information">
+                                <field name="official_name" />
+                                <field name="date_of_birth" />
+                                <field name="passport_number" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Recurring Tasks"></page>
+                            <page string="Medical History"></page>
+                            <page string="Costs">
+                                <field name="move_ids" context="{'default_move_type': 'in_invoice'}">
+                                    <list>
+                                        <field name="name" />
+                                        <field name="partner_id" />
+                                        <field name="amount_total_signed" />
+                                </list>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
-                    <div class="oe_chatter">
+                    <chatter />
+                    <!-- <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers" />
                         <field name="message_ids" widget="mail_thread" />
-                    </div>
+                    </div> -->
                 </form>
             </field>
         </record>
