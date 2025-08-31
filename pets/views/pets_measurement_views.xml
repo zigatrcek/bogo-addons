@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="pets.measurement_view_graph" model="ir.ui.view">
+            <field name="name">pets.measurement.graph</field>
+            <field name="model">pets.measurement</field>
+            <field name="arch" type="xml">
+                <graph string="Pet Measurements Trend" type="line" stacked="0" cumulated="0">
+                    <field name="date" type="row" interval="week"/>
+                    <field name="value" type="measure"/>
+                    <field name="pet_id" type="col"/>
+                    <field name="measurement_type" type="col"/>
+                </graph>
+            </field>
+        </record>
+        <record id="pets.measurement_action_graph" model="ir.actions.act_window">
+            <field name="name">Measurement Trends</field>
+            <field name="res_model">pets.measurement</field>
+            <field name="view_mode">graph</field>
+        </record>
+    </data>
+</odoo>

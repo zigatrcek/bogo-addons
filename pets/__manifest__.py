@@ -6,6 +6,7 @@
     "website": "https://bogosort.xyz",
     "depends": ["account", "contacts"],
     "data": [
+        "views/pets_measurement_views.xml",
         "views/pets_pet_views.xml",
         "views/menu.xml",
         "views/account_move_views.xml",

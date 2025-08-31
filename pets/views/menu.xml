@@ -2,5 +2,6 @@
     <data>
         <menuitem name='Pets' id='pets.menu_root' />
         <menuitem name='Pets' id='pets.menu_pets' parent='pets.menu_root' action='pets.pet_action_window' />
+        <menuitem name="Measurements" id="pets.menu_measurements" parent="pets.menu_root" action="pets.measurement_action_graph" />
     </data>
 </odoo>
