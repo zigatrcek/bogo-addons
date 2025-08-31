@@ -8,9 +8,13 @@
     "data": [
         "views/pets_measurement_views.xml",
         "views/pets_pet_views.xml",
+        "views/pets_species_views.xml",
+        "views/pets_breed_views.xml",
         "views/menu.xml",
         "views/account_move_views.xml",
         "security/ir.model.access.csv",
+        "data/pets_species_data.xml",
+        "data/pets_breed_data.xml",
     ],
     "demo": [],
     "installable": True,

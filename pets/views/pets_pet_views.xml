@@ -6,7 +6,8 @@
             <field name="arch" type="xml">
                 <list>
                     <field name="name" />
-                    <field name="pet_type" string="Type" />
+                    <field name="species_id" />
+                    <field name="breed_id" />
                     <field name="sex" />
                     <field name="date_of_birth" />
                     <field name="activity_ids" widget="list_activity" />
@@ -27,7 +28,8 @@
                         </div>
                         <group>
                             <group string="Basic Info">
-                                <field name="pet_type" />
+                                <field name="species_id" />
+                                <field name="breed_id" domain="[('species_id', '=', species_id)]" />
                                 <field name="sex" />
                                 <field name="vet_id" />
                             </group>
@@ -88,7 +90,12 @@
                                     <field name="display_name" class="mb-0 fw-bold fs-5"/>
                                 </div>
                                 <div>
-                                    <field name="pet_type" class="text-muted"/>
+                                    <t t-if="breed_id">
+                                        <field name="breed_id" class="text-muted" />
+                                    </t>
+                                    <t t-else="">
+                                        <field name="species_id" class="text-muted" />
+                                    </t>
                                 </div>
                                 <footer class="pt-1 p-0 m-0">
                                     <field name="activity_ids" widget="kanban_activity"/>
