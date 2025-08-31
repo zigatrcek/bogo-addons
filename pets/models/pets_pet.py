@@ -17,3 +17,10 @@ class PetsPet(models.Model):
 
     vet_id = fields.Many2one("res.partner", "Veterinarian")
     move_ids = fields.One2many("account.move", "pet_id", "Invoices")
+
+    weight_measurement_ids = fields.One2many(
+        "pets.measurement", "pet_id", domain=[("measurement_type", "=", "weight")]
+    )
+    size_measurement_ids = fields.One2many(
+        "pets.measurement", "pet_id", domain=[("measurement_type", "=", "size")]
+    )
